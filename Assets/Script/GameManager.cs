@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
             endText.text = "You Win!!";
             endText.gameObject.SetActive(true);
             Invoke("MenuLevel", 5f);
+            return;
         }
         if(timeCounter > 0f)
         {
