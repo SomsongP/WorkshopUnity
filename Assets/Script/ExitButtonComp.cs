@@ -1,12 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButtonComp : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void OnPressStartButton()
     {
         SceneManager.LoadScene("Gameplay");
     }
-    
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
+        Debug.Log("Quit");
+    }
 }

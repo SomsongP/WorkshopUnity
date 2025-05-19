@@ -7,7 +7,7 @@ public class itemBase : MonoBehaviour, IInteractable
     public void Interact()
     {
         Debug.Log("Pick item" + itemData.name);
-        inventoryManager.Instance.addItem(itemData);
+        inventoryManager.instance.addItem(itemData);
         Destroy(gameObject);
     }
 }

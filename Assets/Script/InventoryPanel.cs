@@ -17,11 +17,11 @@ public class InventoryPanel : MonoBehaviour
             Destroy(rightPanelTransform.GetChild(i).gameObject);
         }
 
-        for (int i = 0; i <inventoryManager.Instance.inventoryList.Count; i++)
+        for (int i = 0; i <inventoryManager.instance.inventoryList.Count; i++)
         {
             GameObject itemButtonObj = Instantiate(itemBtnPrefabs, rightPanelTransform);
             ItemBtn itemButtonComp = itemButtonObj.GetComponent<ItemBtn>();
-            itemButtonComp.data = inventoryManager.Instance.inventoryList[i];
+            itemButtonComp.data = inventoryManager.instance.inventoryList[i];
             itemButtonComp.icon.sprite = itemButtonComp.data.itemIcon;
             Button button = itemButtonObj.GetComponent<Button>();
             button.onClick.AddListener(() =>
